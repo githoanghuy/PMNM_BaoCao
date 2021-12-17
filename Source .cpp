@@ -170,91 +170,91 @@ void themQuan(DanhSachQuan &ds, Quan &b, int &viTri)
 	ds.data[viTri] = b;
 	ds.b++;
 }
-//// =======[FILE AO]========//
-//int GhiDuLieuA(DanhSachAo ds, const char* fileName)
-//{
-//	FILE* f;
-//	fopen_s(&f, fileName, "w");
-//	if (f == NULL) return 0;
-//	fprintf(f, "%d\n", ds.a);
-//	for (int i = 0; i < ds.a; i++)
-//	{
-//		fprintf(f, "%s\n", ds.data[i].maAo);
-//		fprintf(f, "%s\n", ds.data[i].hieuAo);
-//		fprintf(f, "%s\n", ds.data[i].loaiAo);
-//		fprintf(f, "%s\n", ds.data[i].size);
-//		fprintf(f, "%d\n", ds.data[i].gtao);
-//	}
-//	fclose(f);
-//	return 1;
-//}
-//int DocDuLieuA(DanhSachAo& ds, const char* fileName)
-//{
-//	FILE* f;
-//	fopen_s(&f, fileName, "r+");
-//	if (f == NULL) return 0;
-//	else
-//	{
-//		fscanf_s(f, "%d\n", &ds.a);
-//		for (int i = 0; i < ds.a; i++)
-//		{
-//			fgets(ds.data[i].maAo, 10, f);
-//			ds.data[i].maAo[strlen(ds.data[i].maAo) - 1] = '\0';
-//			fgets(ds.data[i].hieuAo, 10, f);
-//			ds.data[i].hieuAo[strlen(ds.data[i].hieuAo) - 1] = '\0';
-//			fgets(ds.data[i].loaiAo, 10, f);
-//			ds.data[i].loaiAo[strlen(ds.data[i].loaiAo) - 1] = '\0';
-//			fgets(ds.data[i].size, 10, f);
-//			ds.data[i].size[strlen(ds.data[i].size) - 1] = '\0';
-//			fscanf_s(f, "%d\n", &ds.data[i].gtao);
-//		}
-//	}
-//	fclose(f);
-//	return 1;
-//}
-////========================//=============================//
-//// =====[FILE QUAN]==== //
-//int GhiDuLieuQ(DanhSachQuan dsq, const char* fileName)
-//{
-//	FILE* f;
-//	fopen_s(&f, fileName, "w");
-//	if (f == NULL) return 0;
-//	fprintf(f, "%d\n", dsq.b);
-//	for (int i = 0; i < dsq.b; i++)
-//	{
-//		fprintf(f, "%s\n", dsq.data[i].maQuan);
-//		fprintf(f, "%s\n", dsq.data[i].hieuQuan);
-//		fprintf(f, "%s\n", dsq.data[i].loaiQuan);
-//		fprintf(f, "%s\n", dsq.data[i].size);
-//		fprintf(f, "%d\n", dsq.data[i].gtquan);
-//	}
-//	fclose(f);
-//	return 1;
-//}
-//int DocDuLieuQ(DanhSachQuan& dsq, const char* fileName)
-//{
-//	FILE* f;
-//	fopen_s(&f, fileName, "r+");
-//	if (f == NULL) return 0;
-//	else
-//	{
-//		fscanf_s(f, "%d\n", &dsq.b);
-//		for (int i = 0; i < dsq.b; i++)
-//		{
-//			fgets(dsq.data[i].maQuan, 10, f);
-//			dsq.data[i].maQuan[strlen(dsq.data[i].maQuan) - 1] = '\0';
-//			fgets(dsq.data[i].hieuQuan, 10, f);
-//			dsq.data[i].hieuQuan[strlen(dsq.data[i].hieuQuan) - 1] = '\0';
-//			fgets(dsq.data[i].loaiQuan, 10, f);
-//			dsq.data[i].loaiQuan[strlen(dsq.data[i].loaiQuan) - 1] = '\0';
-//			fgets(dsq.data[i].size, 10, f);
-//			dsq.data[i].size[strlen(dsq.data[i].size) - 1] = '\0';
-//			fscanf_s(f, "%d\n", &dsq.data[i].gtquan);
-//		}
-//	}
-//	fclose(f);
-//	return 1;
-//}
+// =======[FILE AO]========//
+int GhiDuLieuA(DanhSachAo ds, const char* fileName)
+{
+	FILE* f;
+	fopen_s(&f, fileName, "w");
+	if (f == NULL) return 0;
+	fprintf(f, "%d\n", ds.a);
+	for (int i = 0; i < ds.a; i++)
+	{
+		fprintf(f, "%s\n", ds.data[i].maAo);
+		fprintf(f, "%s\n", ds.data[i].hieuAo);
+		fprintf(f, "%s\n", ds.data[i].loaiAo);
+		fprintf(f, "%s\n", ds.data[i].size);
+		fprintf(f, "%d\n", ds.data[i].gtao);
+	}
+	fclose(f);
+	return 1;
+}
+int DocDuLieuA(DanhSachAo& ds, const char* fileName)
+{
+	FILE* f;
+	fopen_s(&f, fileName, "r+");
+	if (f == NULL) return 0;
+	else
+	{
+		fscanf_s(f, "%d\n", &ds.a);
+		for (int i = 0; i < ds.a; i++)
+		{
+			fgets(ds.data[i].maAo, 10, f);
+			ds.data[i].maAo[strlen(ds.data[i].maAo) - 1] = '\0';
+			fgets(ds.data[i].hieuAo, 10, f);
+			ds.data[i].hieuAo[strlen(ds.data[i].hieuAo) - 1] = '\0';
+			fgets(ds.data[i].loaiAo, 10, f);
+			ds.data[i].loaiAo[strlen(ds.data[i].loaiAo) - 1] = '\0';
+			fgets(ds.data[i].size, 10, f);
+			ds.data[i].size[strlen(ds.data[i].size) - 1] = '\0';
+			fscanf_s(f, "%d\n", &ds.data[i].gtao);
+		}
+	}
+	fclose(f);
+	return 1;
+}
+//========================//=============================//
+// =====[FILE QUAN]==== //
+int GhiDuLieuQ(DanhSachQuan dsq, const char* fileName)
+{
+	FILE* f;
+	fopen_s(&f, fileName, "w");
+	if (f == NULL) return 0;
+	fprintf(f, "%d\n", dsq.b);
+	for (int i = 0; i < dsq.b; i++)
+	{
+		fprintf(f, "%s\n", dsq.data[i].maQuan);
+		fprintf(f, "%s\n", dsq.data[i].hieuQuan);
+		fprintf(f, "%s\n", dsq.data[i].loaiQuan);
+		fprintf(f, "%s\n", dsq.data[i].size);
+		fprintf(f, "%d\n", dsq.data[i].gtquan);
+	}
+	fclose(f);
+	return 1;
+}
+int DocDuLieuQ(DanhSachQuan& dsq, const char* fileName)
+{
+	FILE* f;
+	fopen_s(&f, fileName, "r+");
+	if (f == NULL) return 0;
+	else
+	{
+		fscanf_s(f, "%d\n", &dsq.b);
+		for (int i = 0; i < dsq.b; i++)
+		{
+			fgets(dsq.data[i].maQuan, 10, f);
+			dsq.data[i].maQuan[strlen(dsq.data[i].maQuan) - 1] = '\0';
+			fgets(dsq.data[i].hieuQuan, 10, f);
+			dsq.data[i].hieuQuan[strlen(dsq.data[i].hieuQuan) - 1] = '\0';
+			fgets(dsq.data[i].loaiQuan, 10, f);
+			dsq.data[i].loaiQuan[strlen(dsq.data[i].loaiQuan) - 1] = '\0';
+			fgets(dsq.data[i].size, 10, f);
+			dsq.data[i].size[strlen(dsq.data[i].size) - 1] = '\0';
+			fscanf_s(f, "%d\n", &dsq.data[i].gtquan);
+		}
+	}
+	fclose(f);
+	return 1;
+}
 ////=============================================================//
 //void sua(DanhSachAo& ds, Ao& tam, int& vt)
 //{
