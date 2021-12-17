@@ -255,27 +255,27 @@ int DocDuLieuQ(DanhSachQuan& dsq, const char* fileName)
 	fclose(f);
 	return 1;
 }
-////=============================================================//
-//void sua(DanhSachAo& ds, Ao& tam, int& vt)
-//{
-//	nhapAo(tam);
-//	cout << " Nhap vi tri can sua : ";
-//	cin >> vt;
-//	ds.data[vt].gtao = tam.gtao;
-//	strcpy_s(ds.data[vt].hieuAo, tam.hieuAo);
-//	strcpy_s(ds.data[vt].loaiAo, tam.loaiAo);
-//	strcpy_s(ds.data[vt].size, tam.size);
-//	strcpy_s(ds.data[vt].maAo, tam.maAo);
-//}
-//void suaq(DanhSachQuan &dsq, Quan &tam1, int &vt)
-//{
-//	nhapQuan(tam1);
-//	cout << " Nhap vi tri can sua : ";
-//	cin >> vt;
-//	dsq.data[vt].gtquan = tam1.gtquan;
-//	strcpy_s(dsq.data[vt].hieuQuan, tam1.hieuQuan);
-//	strcpy_s(dsq.data[vt].loaiQuan, tam1.loaiQuan);
-//	strcpy_s(dsq.data[vt].size, tam1.size);
-//	strcpy_s(dsq.data[vt].maQuan, tam1.maQuan);
-//}
-////=============================================================//
+//=============================================================//
+void sua(DanhSachAo& ds, Ao& tam, int& vt)
+{
+	nhapAo(tam);
+	cout << " Nhap vi tri can sua : ";
+	cin >> vt;
+	ds.data[vt].gtao = tam.gtao;
+	strcpy_s(ds.data[vt].hieuAo, tam.hieuAo);
+	strcpy_s(ds.data[vt].loaiAo, tam.loaiAo);
+	strcpy_s(ds.data[vt].size, tam.size);
+	strcpy_s(ds.data[vt].maAo, tam.maAo);
+}
+void suaq(DanhSachQuan &dsq, Quan &tam1, int &vt)
+{
+	nhapQuan(tam1);
+	cout << " Nhap vi tri can sua : ";
+	cin >> vt;
+	dsq.data[vt].gtquan = tam1.gtquan;
+	strcpy_s(dsq.data[vt].hieuQuan, tam1.hieuQuan);
+	strcpy_s(dsq.data[vt].loaiQuan, tam1.loaiQuan);
+	strcpy_s(dsq.data[vt].size, tam1.size);
+	strcpy_s(dsq.data[vt].maQuan, tam1.maQuan);
+}
+//=============================================================//
