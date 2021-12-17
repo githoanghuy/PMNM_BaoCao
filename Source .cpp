@@ -89,87 +89,87 @@ void them(DanhSachAo &ds,Ao &a, int &viTri)
 	ds.a++;
 }
 ////--------------------------Quần--------------------------//
-//void nhapQuan(Quan& quan)
-//{
-//	cin.ignore();
-//	cout << "Nhap Ma Quan:";
-//	cin.getline(quan.maQuan, 10);
-//	cout << "Nhap Hieu Quan:";
-//	cin.getline(quan.hieuQuan, 20);
-//	cout << "Nhap Loai Quan :";
-//	cin.getline(quan.loaiQuan, 10);
-//	cout << "Nhap size :";
-//	cin.getline(quan.size, 5);
-//	cout << "Nhap gia Quan:";
-//	cin >> quan.gtquan;
-//}
-//void xuatQuan(Quan quan)
-//{
-//	cout << "--------------" << endl;
-//	cout << "MA QUAN: " << quan.maQuan << endl;
-//	cout << "LOAI QUAN :" << quan.loaiQuan << endl;
-//	cout << "Hieu QUAN:" << quan.hieuQuan << endl;
-//	cout << "SIZE QUAN :" << quan.size << endl;
-//	cout << "GIA TIEN QUAN:" << quan.gtquan << endl;
-//	cout << "--------------" << endl;
-//
-//}
-//void nhapDSQ(DanhSachQuan& dsq)
-//{
-//	cout << "Nhap So Luong Quan : ";
-//	cin >> dsq.b;
-//	cout << "-Thong Tin Quan-" << endl;
-//	for (int i = 0; i < dsq.b; i++)
-//	{
-//		cout << "================================" << endl;
-//		cout << "Thong Tin Quan Thu " << i + 1 << endl;
-//		cout << "================================" << endl;
-//		nhapQuan(dsq.data[i]);
-//	}
-//}
-//void xuatDSQ(DanhSachQuan dsq)
-//{
-//	cout << "-----------------------------------" << endl;
-//	cout << "-----------DANH SACH QUAN----------" << endl;
-//	for (int i = 0; i < dsq.b; i++)
-//		xuatQuan(dsq.data[i]);
-//}
-//bool timTheoMaQuan(DanhSachQuan dsq, int& vt)
-//{
-//	char tam[10];
-//	cout << " Nhap ma quan: ";
-//	cin >> tam;
-//	for (int i = 0; i < dsq.b; i++)
-//	{
-//		if (strcmp(dsq.data[i].maQuan, tam) == 0)
-//		{
-//			vt = i;
-//			return true;
-//		}
-//	}
-//	return false;
-//}
-//void xoaQuan(DanhSachQuan &ds, int &viTri)
-//{
-//	cout << "Ban muon Xoa Tai Vi Tri Nao ?";
-//	cin >> viTri;
-//	for (int i = viTri; i < ds.b- 1; i++)
-//	{
-//		ds.data[i] = ds.data[i + 1];
-//	}
-//	ds.b = ds.b - 1;
-//}
-//void themQuan(DanhSachQuan &ds, Quan &b, int &viTri)
-//{
-//	cout << " Ban muon them tai vi tri nao ? ";
-//	cin >> viTri;
-//	for (int i = ds.b; i > viTri; i--)
-//	{
-//		ds.data[i] = ds.data[i - 1];
-//	}
-//	ds.data[viTri] = b;
-//	ds.b++;
-//}
+void nhapQuan(Quan& quan)
+{
+	cin.ignore();
+	cout << "Nhap Ma Quan:";
+	cin.getline(quan.maQuan, 10);
+	cout << "Nhap Hieu Quan:";
+	cin.getline(quan.hieuQuan, 20);
+	cout << "Nhap Loai Quan :";
+	cin.getline(quan.loaiQuan, 10);
+	cout << "Nhap size :";
+	cin.getline(quan.size, 5);
+	cout << "Nhap gia Quan:";
+	cin >> quan.gtquan;
+}
+void xuatQuan(Quan quan)
+{
+	cout << "--------------" << endl;
+	cout << "MA QUAN: " << quan.maQuan << endl;
+	cout << "LOAI QUAN :" << quan.loaiQuan << endl;
+	cout << "Hieu QUAN:" << quan.hieuQuan << endl;
+	cout << "SIZE QUAN :" << quan.size << endl;
+	cout << "GIA TIEN QUAN:" << quan.gtquan << endl;
+	cout << "--------------" << endl;
+
+}
+void nhapDSQ(DanhSachQuan& dsq)
+{
+	cout << "Nhap So Luong Quan : ";
+	cin >> dsq.b;
+	cout << "-Thong Tin Quan-" << endl;
+	for (int i = 0; i < dsq.b; i++)
+	{
+		cout << "================================" << endl;
+		cout << "Thong Tin Quan Thu " << i + 1 << endl;
+		cout << "================================" << endl;
+		nhapQuan(dsq.data[i]);
+	}
+}
+void xuatDSQ(DanhSachQuan dsq)
+{
+	cout << "-----------------------------------" << endl;
+	cout << "-----------DANH SACH QUAN----------" << endl;
+	for (int i = 0; i < dsq.b; i++)
+		xuatQuan(dsq.data[i]);
+}
+bool timTheoMaQuan(DanhSachQuan dsq, int& vt)
+{
+	char tam[10];
+	cout << " Nhap ma quan: ";
+	cin >> tam;
+	for (int i = 0; i < dsq.b; i++)
+	{
+		if (strcmp(dsq.data[i].maQuan, tam) == 0)
+		{
+			vt = i;
+			return true;
+		}
+	}
+	return false;
+}
+void xoaQuan(DanhSachQuan &ds, int &viTri)
+{
+	cout << "Ban muon Xoa Tai Vi Tri Nao ?";
+	cin >> viTri;
+	for (int i = viTri; i < ds.b- 1; i++)
+	{
+		ds.data[i] = ds.data[i + 1];
+	}
+	ds.b = ds.b - 1;
+}
+void themQuan(DanhSachQuan &ds, Quan &b, int &viTri)
+{
+	cout << " Ban muon them tai vi tri nao ? ";
+	cin >> viTri;
+	for (int i = ds.b; i > viTri; i--)
+	{
+		ds.data[i] = ds.data[i - 1];
+	}
+	ds.data[viTri] = b;
+	ds.b++;
+}
 //// =======[FILE AO]========//
 //int GhiDuLieuA(DanhSachAo ds, const char* fileName)
 //{
